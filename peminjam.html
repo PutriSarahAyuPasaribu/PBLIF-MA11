@@ -1,0 +1,90 @@
+<!-- ========================================== -->
+    <!-- BAGIAN 1 & 2: TEMAN/PEMINJAM (ID: page-teman) -->
+    <!-- ========================================== -->
+    <section id="page-teman" class="page hidden">
+        <h1>Teman/Peminjam</h1>
+        <p class="subtitle"></p>
+
+        <!-- Form Tambah Teman (CRUD Teman - Create) -->
+        <section class="panel">
+            <h3>Tambah Teman</h3>
+            <form id="friendForm" class="data-form">
+                <label for="friendName">Nama teman</label>
+                <input id="friendName" required placeholder="Nama lengkap">
+
+                <label for="friendPhone">Nomor telepon</label>
+                <input id="friendPhone" type="tel" placeholder="Nomor telepon">
+
+                <button type="submit" class="primary-btn">
+                    Simpan Teman
+                </button>
+            </form>
+        </section>
+
+        <!-- Tabel Daftar Teman (CRUD Teman - Read & Delete) -->
+        <section class="panel">
+            <h3>Daftar Teman</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Nomor Telepon</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="friendTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- BAGIAN 3, 4 & 5: PEMINJAMAN (ID: page-peminjaman) -->
+    <!-- ========================================== -->
+    <section id="page-peminjaman" class="page hidden">
+        <h1>Peminjaman</h1>
+        <p class="subtitle"></p>
+
+        <!-- Form Catat Peminjaman (CRUD Transaksi - Create) -->
+        <section class="panel">
+            <h3>Catat Peminjaman</h3>
+            <form id="loanForm" class="data-form">
+                <label for="loanFriend">Peminjam</label>
+                <select id="loanFriend" required></select>
+
+                <label for="loanBook">Koleksi</label>
+                <select id="loanBook" required></select>
+
+                <label for="loanDate">Tanggal pinjam</label>
+                <input id="loanDate" type="date" required>
+
+                <label for="loanDue">Batas pengembalian</label>
+                <input id="loanDue" type="date" required>
+
+                <button type="submit" class="primary-btn">
+                    Simpan Peminjaman
+                </button>
+            </form>
+        </section>
+
+        <!-- Riwayat Transaksi & Pengelolaan Pengembalian (Read, Update/Return, Delete) -->
+        <section class="panel">
+            <h3>Riwayat Transaksi</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Peminjam</th>
+                            <th>Koleksi</th>
+                            <th>Tanggal Pinjam</th>
+                            <th>Batas Kembali</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="loanTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </section>
